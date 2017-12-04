@@ -390,6 +390,15 @@ trilean fct_str   (dyn_c* rslt, dyn_c params[1], dyn_byte len __attribute__ ((un
     return DYN_TRUE;
 }
 
+trilean fct_str_to_l (dyn_c* rslt, dyn_c params[1], dyn_byte len __attribute__((unused))) 
+{
+    dyn_str str = dyn_get_string(params);
+    dyn_set_list_len(rslt, dyn_string_len(params));
+    dyn_list_from_str(rslt, str);
+    free(str);
+    return DYN_TRUE;
+}
+
 #define VM_TYPE(X)   (DYN_IS_REFERENCE(X) ? DYN_TYPE((X)->data.ref) : DYN_TYPE(X))
 
 trilean fct_is_none  (dyn_c* rslt, dyn_c params[1], dyn_byte len __attribute__ ((unused)))  { dyn_set_bool (rslt, VM_TYPE(&params[0]) == NONE);      return DYN_TRUE; }

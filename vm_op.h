@@ -37,6 +37,7 @@ trilean fct_is_list  (dyn_c* rslt, dyn_c params[1], dyn_byte len);
 trilean fct_is_dict  (dyn_c* rslt, dyn_c params[1], dyn_byte len);
 trilean fct_is_proc  (dyn_c* rslt, dyn_c params[1], dyn_byte len);
 trilean fct_is_ex    (dyn_c* rslt, dyn_c params[1], dyn_byte len);
+trilean fct_str_to_l (dyn_c* rslt, dyn_c params[1], dyn_byte len);
 
 trilean fct_insert       (dyn_c* rslt, dyn_c params[3], dyn_byte len);
 trilean fct_remove       (dyn_c* rslt, dyn_c params[2], dyn_byte len);

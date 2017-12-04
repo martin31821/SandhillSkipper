@@ -101,6 +101,7 @@ vm_env* vm_init (dyn_ushort memory_size,
     vm_add_function(env, DYN_FCT_C,   "float", (void*)fct_float,    NULL); //"to float");
     vm_add_function(env, DYN_FCT_C,   "str",   (void*)fct_str,      NULL); //"to string");
     vm_add_function(env, DYN_FCT_C,   "int",   (void*)fct_int,      NULL); //"to int");
+    vm_add_function(env, DYN_FCT_C,   "s2l",   (void*)fct_str_to_l, NULL); //"to list from string");
     vm_add_function(env, DYN_FCT_C,   "type",  (void*)fct_type,     NULL); //"type");
     vm_add_function(env, DYN_FCT_C,   "len",   (void*)fct_len,      NULL); //"length");
     vm_add_function(env, DYN_FCT_C,   "time",  (void*)fct_time,     NULL); //"time");
